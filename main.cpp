@@ -32,7 +32,7 @@ int main() {
             system("cls");
             attempCounter++;
             do {
-                std::cout << "Adivina mi numero del 1 al 100\nDigite un numero:\n" <<mynumb<< "\n";
+                std::cout << "Adivina mi numero del 1 al 100\nDigite un numero:\n" << "\n";
                 std::cin >> myguess;
                 //Checks if the guess number is between 1-100
                 if (myguess > 100 || myguess < 1) {
