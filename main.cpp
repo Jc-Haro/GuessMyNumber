@@ -9,6 +9,7 @@
 #endif
 
 std::string attempMessage();
+const int maxRange=200;
 
 //By Juan Carlos Haro Romo
 int main() {
@@ -20,8 +21,8 @@ int main() {
     int myguess = 0;
     bool run = true;
     do {
-        //Generate a number between 0-99 so we add 1 to be 1-100 each time game starts 
-        int mynumb = (rand() % 99) + 1; system("cls");
+        //Generate a number between 0-maxRange each time game starts 
+        int mynumb = (rand() % maxRange) + 1; system("cls");
         int attempCounter = 0;
         std::cout << "Bienvenido a adivina mi numero\n";
 
@@ -32,15 +33,15 @@ int main() {
             system("cls");
             attempCounter++;
             do {
-                std::cout << "Adivina mi numero del 1 al 100\nDigite un numero:\n" << "\n";
+                std::cout << "Adivina mi numero del 1 al "<<maxRange<<"\nDigite un numero:\n" << "\n";
                 std::cin >> myguess;
-                //Checks if the guess number is between 1-100
-                if (myguess > 100 || myguess < 1) {
-                    std::cout << "El numero esta entre 1 y 100\nDigita un numero en dicho rango\n";
+                //Checks if the guess number is between 1-maxRange
+                if (myguess > maxRange || myguess < 1) {
+                    std::cout << "El numero esta entre 1 y "<<maxRange<<"\nDigita un numero en dicho rango\n";
                     system("pause");
                     system("cls");
                 }
-            } while (myguess > 100 || myguess < 1);
+            } while (myguess > maxRange || myguess < 1);
 
             //Checking guees and number
             if (myguess > mynumb) {
