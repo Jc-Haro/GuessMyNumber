@@ -9,7 +9,8 @@
 #endif
 
 std::string attempMessage();
-const int maxRange=200;
+const int maxRange=200;//Determines the max range of guessing which goes from 1-maxRange
+const int howClose=3;//Determines the range to tell if guess is close to the random number
 
 //By Juan Carlos Haro Romo
 int main() {
@@ -48,7 +49,7 @@ int main() {
                 system("cls");
                 system("Color 0B");
                 std::cout << "Mi numero es menor que " << myguess << "\n";
-                if (myguess <= mynumb + 3) {
+                if (myguess <= mynumb + howClose) {
                     std::cout << "Pero esta muy cerca a " << myguess << "\n";
                 }
                 std::cout << attempMessage();
@@ -58,7 +59,7 @@ int main() {
                 system("cls");
                 system("Color 0D");
                 std::cout << "Mi numero es mayor que " << myguess << "\n";
-                if (myguess >= mynumb - 3 ) {
+                if (myguess >= mynumb - howClose ) {
                     std::cout << "Pero esta muy cerca a " << myguess << "\n";
                 }
                 std::cout << attempMessage();
